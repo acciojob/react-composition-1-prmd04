@@ -1,23 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const Tab = ({ tab }) => {
-  const [contentName, setContentName] = useState(tab[0].contents)
-
-  function handleClick(contents) {
-    setContentName(contents)
-  }
+  const [active, setActive] = useState(0);
 
   return (
     <div>
-      {tab.map((item, index) => (
-        <div key={index} onClick={() => handleClick(item.contents)}>
-          <button>{item.titles}</button>
-        </div>
-      ))}
+      <ul>
+        {tab.map((item, index) => (
+          <li key={index} onClick={() => setActive(index)}>
+            {item.titles}
+          </li>
+        ))}
+      </ul>
 
-      <p>{contentName}</p>
+      <p>{tab[active].contents}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Tab
+export default Tab;
