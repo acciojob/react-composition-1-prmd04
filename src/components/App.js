@@ -8,15 +8,15 @@ const App = () => {
   const tab = [
     {
       name:"Tab 1",
-      property:"this is property of Tab 1"
+     content:"This is the content for Tab 1"
     },
     {
       name:"Tab 2",
-      property:"this is property of Tab 2"
+     content:"This is the content for Tab 2"
     },
     {
       name:"Tab 3",
-      property:"this is property of Tab 3"
+     content:"This is the content for Tab 3"
     },
 ]
   return (
