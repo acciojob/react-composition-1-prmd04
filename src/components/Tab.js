@@ -1,19 +1,20 @@
 import React, { useState } from 'react'
 
-const Tab = ({tab}) => {
-  const [contentName, setContentName] = useState("")
-  console.log(tab);
+const Tab = ({ tab }) => {
+  const [contentName, setContentName] = useState(tab[0].contents)
 
-  function handleClick(contents){
+  function handleClick(contents) {
     setContentName(contents)
   }
+
   return (
     <div>
-      {tab.map((item,index) => {
-        return (<ul key={index}>
-          <li onClick={()=>handleClick(item.contents)}>{item.titles}</li>
-        </ul>)})}
-      
+      {tab.map((item, index) => (
+        <div key={index} onClick={() => handleClick(item.contents)}>
+          <button>{item.titles}</button>
+        </div>
+      ))}
+
       <p>{contentName}</p>
     </div>
   )
