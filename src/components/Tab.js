@@ -13,7 +13,7 @@ const Tab = ({tab}) => {
           <li onClick={()=>handleClick(item.name)}>{item.name}</li>
         </ul>)})}
       
-      <p>This is content from {tabName}</p>
+      <p>This is the content for {tabName}</p>
     </div>
   )
 }
